@@ -1,0 +1,77 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1 plus MathML 2.0//EN" "http://www.w3.org/Math/DTD/mathml2/xhtml-math11-f.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US">
+<!--This file was converted to xhtml by LibreOffice - see https://cgit.freedesktop.org/libreoffice/core/tree/filter/source/xslt for the code.-->
+
+<head profile="http://dublincore.org/documents/dcmi-terms/">
+<meta http-equiv="Content-Type" content="application/xhtml+xml; charset=utf-8"/>
+<title xml:lang="en-US">WHY?</title>
+<meta name="DCTERMS.title" content="" xml:lang="en-US"/>
+
+<meta name="DCTERMS.language" content="en-US" scheme="DCTERMS.RFC4646"/>
+<meta name="DCTERMS.source" content="http://xml.openoffice.org/odf2xhtml"/>
+
+<meta name="DCTERMS.issued" content="2026-05-03T20:14:01.051997400" scheme="DCTERMS.W3CDTF"/>
+
+<meta name="DCTERMS.modified" content="2026-05-03T20:39:07.269508400" scheme="DCTERMS.W3CDTF"/>
+
+
+<meta name="xsl:vendor" content="libxslt"/>
+<link rel="schema.DC" href="http://purl.org/dc/elements/1.1/" hreflang="en"/>
+<link rel="schema.DCTERMS" href="http://purl.org/dc/terms/" hreflang="en"/>
+<link rel="schema.DCTYPE" href="http://purl.org/dc/dcmitype/" hreflang="en"/>
+<link rel="schema.DCAM" href="http://purl.org/dc/dcam/" hreflang="en"/>
+
+<style>
+    table { border-collapse:collapse; border-spacing:0; empty-cells:show }
+    td, th { vertical-align:top; font-size:12pt;}
+    h1, h2, h3, h4, h5, h6 { clear:both;}
+    ol, ul { margin:0; padding:0;}
+    li { list-style: none; margin:0; padding:0;}
+    span.footnodeNumber { padding-right:1em; }
+    span.annotation_style_by_filter { font-size:95%; font-family:Arial; background-color:#fff000;  margin:0; border:0; padding:0;  }
+    span.heading_numbering { margin-right: 0.8rem; }* { margin:0;}
+    .paragraph-Heading_20_1{ font-size:18pt; margin-bottom:0.0835in; margin-top:0.1665in; font-family:'Liberation Sans'; writing-mode:horizontal-tb; direction:ltr;font-weight:bold; }
+    .paragraph-P1{ font-size:12pt; font-family:'Liberation Serif'; writing-mode:horizontal-tb; direction:ltr;}
+    /* ODF styles with no properties representable as CSS:
+    .T1  { } */
+</style>
+</head>
+
+<body dir="ltr" style="max-width:8.5in;margin-top:0.7874in; margin-bottom:0.7874in; margin-left:0.7874in; margin-right:0.7874in; ">
+
+<h1 class="paragraph-Heading_20_1"><a id="a__Preamble"><span/></a>Cutting parts</h1>
+<p class="paragraph-P1"> </p>
+<p class="paragraph-P1">I struggle with cutting shapes, even straight lines, with my plasma cutter. Recently, as a fun project, 
+			I attempted to make a sleeve hitch plate. The plans called for a 2" diameter washer with a 7/8" center hole cut out of 
+			3/16" thick steel. When I tried to free hand this washer, it wasn't round and it wasn't 2" in diameter. I then tried to use a 
+			hole saw. This worked, but it took forever to cut the washer and the size was 2-1/8" because I didn't have a 2" hole saw.
+			This is when I decided I needed a CNC plasma table.</p>
+
+<h1 class="paragraph-Heading_20_1"><a id="a__Preamble"><span/></a>CNC Plasma Tables</h1>
+<p class="paragraph-P1"> </p>
+<p class="paragraph-P1">I looked at several available tables. The price tags for them was well outside my willingness for something I consider a hobby.
+			Even JD's Garage's offering requires significant work in cutting or printing the parts and assembling everything, including the microcontroller.</p>
+
+<h1 class="paragraph-Heading_20_1"><a id="a__Preamble"><span/></a>Laser Engraver Conversion</h1>
+<p class="paragraph-P1"> </p>
+<p class="paragraph-P1">I've watched several YouTube videos of people converting Laser Engravers into CNC plasma tables. However, I have yet to see a video that
+describes the whole process from beginning to end.</p>
+
+<h1 class="paragraph-Heading_20_1"><a id="a__Preamble"><span/></a>CAD Software</h1>
+<p class="paragraph-P1"> </p>
+<p class="paragraph-P1">The other issue is the CAD software. I didn't want to pay licenses for software that I'm going to use in a hobby. This was the next issue
+I looked into. The obvious choice is FreeCAD. When I looked into FreeCAD, it was disappointing to find out that the G-Code  it (with the help of linuxcnc) puts out
+does not have the commands in it to turn the torch on and off. Other G-Code commands necessary to run the table are also missing. I decided this is where I needed to
+start. If I could learn FreeCAD, understand what the changes to the G-Code were necessary for CNC plasma to work, and automate it, then it would be worth while to buy
+a laser engraver and set it up to work with my plasma cutter. </p>
+
+<h1 class="paragraph-Heading_20_1"><a id="a__Preamble"><span/></a>plasma_post</h1>
+<p class="paragraph-P1"> </p>
+<p class="paragraph-P1">The shortcomings of FreeCAD are actually a blessing. I don't think I'd want FreeCAD producing CNC plasma G-Code. The reason is that you'd constantly be
+modifying your model, adjusting the thickness (Z-Axis) of your model or part. I wrote "plasma_post" to edit the G-Code that linuxcnc produces. This software will modify the G-Code
+adding the necessary codes needed to cut the part. Once I could see that this was going to work, I began to spend the money to acquire the laser engraver and getting it hooked up
+to my plasma cutter. </p>
+</body>
+
+</html>
+

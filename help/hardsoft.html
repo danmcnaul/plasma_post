@@ -1,0 +1,108 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1 plus MathML 2.0//EN" "http://www.w3.org/Math/DTD/mathml2/xhtml-math11-f.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US">
+<!--This file was converted to xhtml by LibreOffice - see https://cgit.freedesktop.org/libreoffice/core/tree/filter/source/xslt for the code.-->
+
+<head profile="http://dublincore.org/documents/dcmi-terms/">
+<meta http-equiv="Content-Type" content="application/xhtml+xml; charset=utf-8"/>
+<title xml:lang="en-US">Hardware and Software</title>
+<meta name="DCTERMS.title" content="" xml:lang="en-US"/>
+
+<meta name="DCTERMS.language" content="en-US" scheme="DCTERMS.RFC4646"/>
+<meta name="DCTERMS.source" content="http://xml.openoffice.org/odf2xhtml"/>
+
+<meta name="DCTERMS.issued" content="2026-05-03T20:14:01.051997400" scheme="DCTERMS.W3CDTF"/>
+
+<meta name="DCTERMS.modified" content="2026-05-03T20:39:07.269508400" scheme="DCTERMS.W3CDTF"/>
+
+
+<meta name="xsl:vendor" content="libxslt"/>
+<link rel="schema.DC" href="http://purl.org/dc/elements/1.1/" hreflang="en"/>
+<link rel="schema.DCTERMS" href="http://purl.org/dc/terms/" hreflang="en"/>
+<link rel="schema.DCTYPE" href="http://purl.org/dc/dcmitype/" hreflang="en"/>
+<link rel="schema.DCAM" href="http://purl.org/dc/dcam/" hreflang="en"/>
+
+<style>
+    table { border-collapse:collapse; border-spacing:0; empty-cells:show }
+    td, th { vertical-align:top; font-size:12pt;}
+    h1, h2, h3, h4, h5, h6 { clear:both;}
+    ol, ul { margin:0; padding:0;}
+    li { list-style: none; margin:0; padding:0;}
+    span.footnodeNumber { padding-right:1em; }
+    span.annotation_style_by_filter { font-size:95%; font-family:Arial; background-color:#fff000;  margin:0; border:0; padding:0;  }
+    span.heading_numbering { margin-right: 0.8rem; }* { margin:0;}
+    .paragraph-Heading_20_1{ font-size:18pt; margin-bottom:0.0835in; margin-top:0.1665in; font-family:'Liberation Sans'; writing-mode:horizontal-tb; direction:ltr;font-weight:bold; }
+    .paragraph-P1{ font-size:12pt; font-family:'Liberation Serif'; writing-mode:horizontal-tb; direction:ltr;}
+    /* ODF styles with no properties representable as CSS:
+    .T1  { } */
+</style>
+</head>
+
+<body dir="ltr" style="max-width:8.5in;margin-top:0.7874in; margin-bottom:0.7874in; margin-left:0.7874in; margin-right:0.7874in; ">
+	<br><img src="img/gcode_flow.bmp" />
+<br><br>
+
+<h1 class="paragraph-Heading_20_1"><a id="a__Preamble"><span/></a>In the House</h1>
+<p class="paragraph-P1"> </p>
+<p class="paragraph-P1">Here I have a capable desktop where I do my parts design using FreeCAD v1.1. I also use inkScape v1.4.4 when needed. 
+In addition I have a NAS (Network Attached Storage) device on the network. This is where I store all my G-Code files. This way I can access 
+the G-Code from the house and/or the shop. </p>
+
+<h1 class="paragraph-Heading_20_1"><a id="a__Preamble"><span/></a>In the Shop</h1>
+<p class="paragraph-P1"> </p>
+<p class="paragraph-P1">Here I have an old Windows XP laptop running LaserGRBL v7.14.1. The XP laptop has .NET v4.0 installed. This is the last version offered by Microsoft.
+You can still find this update available on the internet. The plasma cutter I own is a Harbor Freight Titanium45. The laser engraver I bought was on sale. It's a Creality 
+Falcon 10w laser engraver. LaserGRBL is the G-Code sender I use to send the G-Code instructions to the Falcon 10w.  </p>
+
+<h1 class="paragraph-Heading_20_1"><a id="a__Preamble"><span/></a>Laser Engraver Conversion</h1>
+<p class="paragraph-P1"> </p>
+<p class="paragraph-P1">I've watched several YouTube videos of people converting Laser Engravers into CNC plasma tables. However, I have yet to see a video that
+describes the whole process from beginning to end. You may want to watch my series of videos on my conversion. They are on YouTube and show all the mistakes I made. 
+It involves connecting a SSR-25DD relay (output side) to the Titanium45's on/off switch inside the cabinet. Then connecting the VDC- ground and VDC+ PWM to the other 
+side of the relay (input side). When LaserGRBL sends a M03 instruction, the Falcon 10w sends power down the PWM wire to the relay. This in turn causes the output side 
+of the relay to be closed and the Titanium45 turns on. Later in the G-Code script, LaserGRBL sends the Falcon 10w a M05 instruction. This causes the Falcon to stop the 
+power on the PWM wire and the relay switch opens shutting off the Titanium45.  </p>
+
+<h1 class="paragraph-Heading_20_1"><a id="a__Preamble"><span/></a>FreeCAD</h1>
+<p class="paragraph-P1"> </p>
+<p class="paragraph-P1">On the parts design side, I use FreeCad. The "Parts Design" workbench is used to layout my part, usually a bracket of some type. I'm very new to FreeCAD
+and I'm the least qualified to give instructions on FreeCAD's use. There are excellent videos on YouTube on how to use FreeCAD. I will, however, make some observations that you
+may find helpful.</p> 
+<ol>
+<br><br>
+	<li>Round Boxes don't play nice, for me, in the "CAM" workbench. The "CAM" workbench is a part of FreeCAD I use to generate the tool paths (cut sequences) and ultimately the G-Code. I get 
+around this by using regular boxes. After I have the boxes constrained to where they need to be, I then round the corners in the "Parts Design" WB, not the "Sketcher" WB. Rounding sharp corners
+on boxes is the last thing I do before moving on to the "CAM" WB.</li>
+<br><br>
+	<li>In "Parts Designer" workbench, for every new "feature" (hole, slot, etc.) I want to add to my part, I create a "New Sketch". So, the plate or bracket itself is a "New Sketch". Then 
+	each and every hole I need to add becomes another "New Sketch". This isn't a big deal, really. Just something to know and get in the habit of doing.</li>
+<br><br>
+	<li>In "Sketcher" workbench, you'll be working on the X,Y coordinate plane and your entire part will stay in the upper right quadrant (+X and +Y area)</li>
+<br><br>
+	<li>Open the "CAM" workbench and add 2 new tools to the "Toolbit Library Manager" (MENU-> CAM,ToolBit Library Manager, Adds a Toolbit, Endmill). A new endmill to represent your plasma 
+	cutter. Another new endmill to represent your engraver. Set both the "S" (shank diameter) and the "D" (Diameter) parameters to the diameter of the plasma arc and laser light 
+	respectively. Name your new toolbits appropriately. I ran test cuts and measured the kerfs to get these values. Restart FreeCad.</li>
+	<br><img src="img/freecad_tool_manager.bmp" />
+<br><br>
+	<li>In the "CAM" workbench, immediately after creating a "JOB", I double click the "Setup Sheet" and scroll all the way to the bottom. The section says "Setup Global". 
+	Here I copy and paste the variable from "Final Depth" (OpFinalDepth) over the top of "Step Down". If you don't do this, linuxcnc will do what any endmill does, step down 
+	little by little to get through thickness of the material. We want to cut straight through with one pass.	</li>
+	<img src="img/Stepdown_depth.bmp" />
+<br><br>
+	<li>In the "CAM" workbench, I create two "JOBs" for each part I design. One "JOB" for the plasma tool (endmill), and the other for the engraver tool (endmill). This allows me
+	to cut parts out of cardboard with the laser engraver before I commit to cutting steel with the plasma cutter.	</li>
+</ol>
+<h1 class="paragraph-Heading_20_1"><a id="a__Preamble"><span/></a>My software plasma_post</h1>
+<p class="paragraph-P1"> </p>
+<p class="paragraph-P1">I don't think I'd want FreeCAD producing CNC plasma G-Code. The reason is that you'd constantly be
+modifying your model, adjusting the thickness (Z-Axis) of your model or part. I wrote "plasma_post" to read in the G-Code that linuxcnc produces and generate a new G-Code file. 
+plasma_post will modify the G-Code adding the necessary codes needed to cut the part on a Laser Engraver or a CNC Plasma Table. </p>
+
+
+<h1 class="paragraph-Heading_20_1"><a id="a__Preamble"><span/></a>LaserGRBL</h1>
+<p class="paragraph-P1"> </p>
+<p class="paragraph-P1">More free software. LaserGRBL is the gcode sender. I have an old HP laptop running WinXP and LaserGRBL in the shop. The laptop is connected via USB cable to
+the laser engraver. I open the gcode I created from the NAS (Network Attached Storage) and LaserGRBL sends it to the laser engraver.</p>
+</body>
+
+</html>
+

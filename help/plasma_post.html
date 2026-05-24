@@ -1,0 +1,285 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1 plus MathML 2.0//EN" "http://www.w3.org/Math/DTD/mathml2/xhtml-math11-f.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US">
+<!--This file was converted to xhtml by LibreOffice - see https://cgit.freedesktop.org/libreoffice/core/tree/filter/source/xslt for the code.-->
+
+<head profile="http://dublincore.org/documents/dcmi-terms/">
+<meta http-equiv="Content-Type" content="application/xhtml+xml; charset=utf-8"/>
+<title xml:lang="en-US">Plasma Post Processor</title>
+<meta name="DCTERMS.title" content="" xml:lang="en-US"/>
+
+<meta name="DCTERMS.language" content="en-US" scheme="DCTERMS.RFC4646"/>
+<meta name="DCTERMS.source" content="http://xml.openoffice.org/odf2xhtml"/>
+
+<meta name="DCTERMS.issued" content="2026-05-03T20:14:01.051997400" scheme="DCTERMS.W3CDTF"/>
+
+<meta name="DCTERMS.modified" content="2026-05-03T20:39:07.269508400" scheme="DCTERMS.W3CDTF"/>
+
+
+<meta name="xsl:vendor" content="libxslt"/>
+<link rel="schema.DC" href="http://purl.org/dc/elements/1.1/" hreflang="en"/>
+<link rel="schema.DCTERMS" href="http://purl.org/dc/terms/" hreflang="en"/>
+<link rel="schema.DCTYPE" href="http://purl.org/dc/dcmitype/" hreflang="en"/>
+<link rel="schema.DCAM" href="http://purl.org/dc/dcam/" hreflang="en"/>
+
+<style>
+    table { border-collapse:collapse; border-spacing:0; empty-cells:show }
+    td, th { vertical-align:top; font-size:12pt;}
+    h1, h2, h3, h4, h5, h6 { clear:both;}
+    ol, ul { margin:0; padding:0;}
+    li { list-style: none; margin:0; padding:0;}
+    span.footnodeNumber { padding-right:1em; }
+    span.annotation_style_by_filter { font-size:95%; font-family:Arial; background-color:#fff000;  margin:0; border:0; padding:0;  }
+    span.heading_numbering { margin-right: 0.8rem; }* { margin:0;}
+    .paragraph-Heading_20_1{ font-size:18pt; margin-bottom:0.0835in; margin-top:0.1665in; font-family:'Liberation Sans'; writing-mode:horizontal-tb; direction:ltr;font-weight:bold; }
+    .paragraph-P1{ font-size:12pt; font-family:'Liberation Serif'; writing-mode:horizontal-tb; direction:ltr;}
+    /* ODF styles with no properties representable as CSS:
+    .T1  { } */
+</style>
+</head>
+
+<body dir="ltr" style="max-width:8.5in;margin-top:0.7874in; margin-bottom:0.7874in; margin-left:0.7874in; margin-right:0.7874in; ">
+
+<h1 class="paragraph-Heading_20_1"><a id="a__Preamble"><span/></a><font color="red" size="+3"><b>WARNING!</b></font></h1>
+<p class="paragraph-P1"> </p>
+<p class="paragraph-P1">
+I DO NOT HAVE A THC (Torch Height Controller). Therefore, the Z-Axis movements produced by linuxcnc are ignored by my laser engraver.
+If you have a THC, the linuxcnc Z-Axis commands may have disasterous results for your Z-Axis movements.<br><br>
+<h1 class="paragraph-Heading_20_1"><a id="a__Preamble"><span/></a>This is the license for plasma_post</h1>
+<p class="paragraph-P1"> </p>
+<p class="paragraph-P1">
+**<br>
+**		UNLICENSE LICENSE<br>
+**<br>
+**	This is free and unencumbered software released into the public<br>
+**	domain.<br>
+**<br>
+**	Anyone is free to copy, modify, publish, use, compile, sell, or<br>
+**	distribute this software, either in source code form or as a<br>
+**	compiled binary, for any purpose, commercial or non-commercial,<br>
+**	and by any means.<br>
+**<br>
+**	In jurisdictions that recognize copyright laws, the author or<br>
+**	authors of this software dedicate any and all copyright interest<br>
+**	in the software to the public domain. We make this dedication<br>
+**	for the benefit of the public at large and to the detriment of<br>
+**	our heirs and successors. We intend this dedication to be an overt<br>
+**	act of relinquishment in perpetuity of all present and future<br>
+**	rights to this software under the copyright law.<br>
+**<br>
+**	THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,<br>
+**	EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES<br>
+**	OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND <br>
+**	NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS BE LIABLE FOR ANY<br>
+**	CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTACT,<br>
+**	TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE<br>
+**	SOFTWARE OR THE USE OF OTHER DEALINGS IN THE SOFTWARE.<br>
+**<br> </p>
+
+<h1 class="paragraph-Heading_20_1"><a id="a__Preamble"><span/></a>Where to obtain plasma_post</h1>
+<p class="paragraph-P1"> </p>
+<p class="paragraph-P1">You will find the plasma_post project on GITHUB. Search for "plasma_post" or "danmcnaul" on GitHub.  </p>
+
+<h1 class="paragraph-Heading_20_1"><a id="a__Preamble"><span/></a>How to compile/build plasma_post</h1>
+<p class="paragraph-P1"> </p>
+<p class="paragraph-P1">Download the plasma_post source from GitHub.<br> 
+On Windows 10/11, download and unzip the W64devkit-x64 from GitHub. cd into plasma_post src and run "make release"<br>
+On Windows XP, download and unzip the W64devkit-x86 from GitHub. cd into plasma_post src and run "make release"<br>
+On Linux, ensure you have the development environment installed. cd into plasma_post src and run "make release"<br>
+<br>
+If you want a debug version, run "make debug"
+<br>
+If you want to see what OS the make file sees, run "make info"
+<br><br>
+To compile/build this HELP file "plasma_post.chm", you need the MS HTML Help WorkShop. You can find it on the internet.<br>
+Install that first, then you can cd into the Help directory and build the plasma_post.chm file.<br><br>
+
+To build the help file on linux, you can use "chmcmd" (install fp-utils) or the MS HTML Help WorkShop (hhc.exe) via Wine.<br>
+To view this help file "plasma_post.chm" on linux, install kchmviewer<br>
+
+</p>
+
+<h1 class="paragraph-Heading_20_1"><a id="a__Preamble"><span/></a>How to install/uninstall plasma_post</h1>
+<p class="paragraph-P1"> </p>
+<p class="paragraph-P1">There is no installer/uninstaller for plasma_post. Plasma_post does not monkey with the windows registry or any of that nonsense. It is a command line (DOS/LINUX) 
+program. Copy to a directory where you want it to reside. If you no longer want to use it, simply delete it. If you want Windows or Linux to be able to find it, add the directory you 
+put it in to your PATH. Plasma_post comes in 3 flavors, plasma_post64.exe (modern 64bit windows), plasma_post32.exe (Windows 32bit i.e. WinXP), and plasma_post (modern 64bit Linux). On Windows, 
+open up a CMD window or Powershell window to run it. On Linux, open up a TERMINAL to run it. </p>
+
+<h1 class="paragraph-Heading_20_1"><a id="a__Preamble"><span/></a>Executing plasma_post</h1>
+<p class="paragraph-P1"> </p>
+<p class="paragraph-P1">As stated above, you run it from the command line using parameters or "flags" to indicate what you want plasma_post to do. There are 4 basic execution types for 
+plasma_post. For ease, I'll use plasma_post64.exe, but you might be using the other executables depending on your OS. You can mix and match short flag and long flag formats. </p> 
+<ol>
+<br><br>
+<pre>
+	<li><b><font color=red size=+1>.\plasma_post64.exe -h</li>
+	<li>.\plasma_post64.exe --help</font></b></li>
+</pre>
+	<br>This will cause plasma_post to write out a wordy "help" message. Try running ".\plasma_post64.exe --help > help.txt 2>&1" (no quotes) to capture it all to a text file for viewing in notepad.
+<br><br>
+<br><br>
+<pre>
+	<li><b><font color=red size=+1>.\plasma_post64.exe -V -I Titanium45.ini</li>
+	<li>.\plasma_post64.exe --validate --inifile=Titanium45.ini</font></b></li>
+</pre>
+	<br><a href="#iniFile">See below about the "iniFile"</a>. This will cause plasma_post to read your iniFile and validate the entries you have in this table.
+	<br><br>
+<pre>
+.\plasma_post64.exe --validate --inifile=bad.ini
+	
+Validating contents of bad.ini
+	Contents are equivalent to running =>
+
+Rec #1 is a comment record. SKIPPING
+Rec #2 THICKNESS or SELECTION field #2 is not numeric. ERROR value found=1x0.0000
+Rec #2 SPEED field #5 is not numeric. ERROR value found=8x30
+Rec #2 CIRCLE SPEED field #6 is not numeric. ERROR value found=52x4.5
+Rec #2 PIERCE pause field #7 is not numeric. ERROR value found=0.x00
+Rec #2 INTENSITY field #8 is not numeric. ERROR value found=1x00
+Rec #3 incorrect number of fields. Expecting 9. Found 10 SKIPPING
+
+Either your INI file bad.ini is empty or all the records are bad. No records passed the edits.
+</pre>
+	<br><br>
+	Here's a sample of a successful iniFile validation.
+	<br><br>
+<pre>
+.\plasma_post64.exe -V -I Titanium45.ini
+
+Validating contents of Titanium45.ini
+	Contents are equivalent to running =>
+
+plasma_post myGCodeIn.gcode -F 5080 -C 3302 -P 1.6 -S 1000 -O "_16ga"
+plasma_post myGCodeIn.gcode -F 3050 -C 1982 -P 1.6 -S 1000 -O "_1-8in"
+plasma_post myGCodeIn.gcode -F 2400 -C 1560 -P 1.6 -S 1000 -O "_10ga"
+plasma_post myGCodeIn.gcode -F 1650 -C 1072 -P 1.7 -S 1000 -O "_3-16in"
+plasma_post myGCodeIn.gcode -F 1140 -C 741 -P 1.9 -S 1000 -O "_1-4in"
+plasma_post myGCodeIn.gcode -F 630 -C 409 -P 2.1 -S 1000 -O "_3-8in"
+plasma_post myGCodeIn.gcode -F 300 -C 195 -P 2.7 -S 1000 -O "_1-2in"
+plasma_post myGCodeIn.gcode -F 200 -C 130 -P 3.5 -S 1000 -O "_5-8in"
+	NOTE => LaserGRBL expects speeds are given in mm/min. Do NOT specify in/min
+</pre>
+
+<br><br>
+<br><br>
+<pre>
+	<li><b><font color=red size=+1>.\plasma_post64.exe myGCodeIn.gcode -F 5080 -C 3302 -P 1.6 -S 1000 -O "_16ga"</li>
+	<li>.\plasma_post64.exe myGCodeIn.gcode --speed=5080 --circle=3302 --pierce=1.6 --intensity=1000 --outext="_16ga"</font></b></li>
+</pre>
+	<br>This execution style is very specific. No iniFile necessary. You can provide the settings on the command line and the G-Code will be modified accordingly.
+	In this case, the input file "myGCodeIn.gcode" will be modified with the speeds, pierce pauses, and intensity. The resulting output file will be "myGCodeIn_16ga.gcode".<br><br>
+	<b>--speed=</b> is the speed to move the torch on G1 straight aways. In G-Code parlance, this is the "F" code on G1, G2, and G3 codes.<br>
+	<b>--circle=</b> is the speed to move the torch on G2 (clockwise arcs) and G3 (counter-clockwise arcs). Slowing down on circles improves the circles. I run my circle speeds
+	at 65% of my straight away speed. As stated above, this is the "F" code.<br>
+	<b>--pierce=</b> is the seconds to delay before moving to make this cut. On my HF Titanium45, I have to add roughly 1.5 seconds to the pierce time to allow the arc to form.
+	In G-Code parlance, this is the "G4 Pn.n" codes.<br>
+	<b>--intensity=</b> is the voltage to send down the PWM wire to trigger the SSR-25DD relay. Set this to 1000, maximum voltage. Older laser engraver's max may be 256.
+	In G-Code parlance, this is the "Snnnn" code.<br>
+	<b>--outext=</b> is the output file name modifier. I like to keep my FreeCAD/linuxcnc G-Code original by modifying it into a new file.
+<br><br>
+<br><br>
+<pre>
+	<li><b><font color=red size=+1>.\plasma_post64.exe myGCodeIn.gcode -I myIniFile.csv -T "==200"</li>
+	<li>.\plasma_post64.exe myGCodeIn.gcode --inifile=myIniFile.csv --thickness="==200"</font></b></li>
+</pre>
+	<br>Your testing and use of your CNC plasma cutter will result in favorite settings for the thicknesses of metal you cut. For example, I typically cut brackets/plates out of
+	3/16", 4/16", 6/16", and 8/16" steel. Occasionally, I cut thinner metal. The manufacturer publishes settings for each of these thicknesses. This is where the iniFile comes in. I can put
+	my settings in this "|" delimited file and then ask plasma_post to look up my settings in this table and use those for the speeds, delays, intensity, and output file naming
+	conventions.<br><br>
+	<b>--inifile=</b> is the "|" delimited file containing my settings<br>
+	<b>--thickness=</b> I should have used a better name. This is the row or rows in the iniFile I want output files generated for. The first 2 characters of this flag are the
+	type of selection I'm doing. The valid values are "==" (equal), "&gt=" (greater than or equal), "&lt=" (less than or equal), and "!=" (not equal). The next bits are the numeric
+	value that I'm looking to compare to. In this example, I'm saying the row or rows that are equal to 200. Below is my Titanium45 iniFile. This example would produce G-Code modifications
+	to cut the 3/16" entry. It's the only one with 200. If the example was -T ">=200", then 4 output files would be generated. 3/16" thru 8/16".<br>
+	<br><br>
+	<img src="img/iniFile01.bmp" />
+	<br><br>
+<h1 class="paragraph-Heading_20_1" id="iniFile"><a id="a__Preamble"><span/></a>iniFile</h1>
+<p class="paragraph-P1"> </p>
+<p class="paragraph-P1">I use LibreOffice Calc to make my iniFiles. MS Excel or GoogleSheets will also work. Save the file as a ".CSV" (Comma Separated Values), except don't use the Comma
+to separate the values. You must use the "|" (PIPE) character. You'll find the "|" above your enter key, shift-backslash on your keyboard. Your file may only have 9 fields/columns 
+and the fields must be in the order shown in my image above.<br><br>
+	<b>Field-01</b> <font color=blue size+1>Comment</font> -- Placing any value, including a space, in this field will make the row a comment. Plasma_post will skip this row/record as a comment.<br>
+	<b>Field-02</b> <font color=blue size+1>Thickness</font> -- Your selector field. <b><u>Required. Must be Numeric.</u></b> This is the field that the "-T" is searching for. You can have duplicate values. This is handy if You
+	always want to produce two or more output files for your parts.<br>
+	<b>Field-03</b> <font color=blue size+1>A thickness descriptor</font> field for your convience. A way to document your setting. This field must be present, but isn't used by plasma_post processing.<br>
+	<b>Field-04</b> <font color=blue size+1>Amps</font>, another descriptor field for your convience. A way to document the amperage setting you may set on your plasma cutter before cutting your parts.<br>
+	<b>Field-05</b> <font color=blue size+1>Cut Speed</font> -- <b><u>Required. Must be Numeric. Must be in mm/min.</u></b> This is the speed on straight away cuts. This results in the "Fnnnn" G-Code on G1 statements.<br>
+	<b>Field-06</b> <font color=blue size+1>Circle Speed</font> -- <b><u>Required. Must be Numeric. Must be in mm/min.</u></b> This is the speed on arc/circle cuts. This results in the "Fnnnn" G-Code on G2/G3 statements.<br>
+	<b>Field-07</b> <font color=blue size+1>Pierce Delay</font> -- <b><u>Required. Must be Numeric. Must be in seconds.</u></b> This is the time to wait before moving the torch. This results in the "Pnn.nn" G-Code on G4 statements.
+	My HF Titanium45 requires approximately 1.5 seconds to be added to the pierce to give the machine time to start and generate a plasma arc.<br>
+	<b>Field-08</b> <font color=blue size+1>Laser intensity</font> -- <b><u>Required. Must be Numeric.</u></b> This is percentage of voltage to send down the PWM wire to trigger the relay. For modern Laser Engravers, use 1000 (100% or 5vdc). 
+	For older Laser Engravers this might be 256. This results in the "S1000" G-Code.<br>
+	<b>Field-09</b> <font color=blue size+1>Outfile extension</font> -- <b><u>Required. Any valid filesystem file name characters.</u></b> These characters will be added to the "stem" of your G-Code file name when producing the output file.<br>
+<br><br>
+Your iniFile can be named what ever you wish. You can have multiple iniFile(s). I have an iniFile for the Falcon laser engraver for different thicknesses of cardboard, and a iniFile for the 
+HF Titanium45. You can have duplicate rows in your iniFile sharing the same "Thickness" setting (Field-02). While I'm building stuff, I often drag steel out of the scrap pile. Most times for me, 
+there is little difference between cutting the part out of 3/16" or 4/16" steel. So, I may duplicate those entries and give them the same "Thickness" (Field-02) number, but with different speed settings. 
+Be Creative!<br>
+  </p>
+<h1 class="paragraph-Heading_20_1"><a id="a__Preamble"><span/></a>Your G-Code (input file)</h1>
+<p class="paragraph-P1"> </p>
+<p class="paragraph-P1">As stated, I use the "Parts Design" and "Sketcher" workbenches in FreeCAD v1.1 to design my parts. Then I use the "CAM" workbench in FreeCAD v1.1 to create my Jobs. These
+are the tool paths needed to cut the parts out. I use the linuxcnc post processor in CAM to generate the G-Code. I create 2 Jobs for each part. One to cut the part out in cardboard using the laser engraver.
+Another Job to cut the part out in steel using the CNC plasma cutter. I standardized the naming convention of these linuxcnc G-Code output file names. This makes referencing these files via plasma_post simpler.
+You may wish to do something similar, but totally up to you. I chose the format for my linuxcnc G-Code files as %d_%j.gcode. %d in FreeCAD is the name of your project/part. %j in FreeCAD is the name of the active 
+Job. Of course, when I create the JOBs in CAM workbench, I name them appropriately (i.e. Titanium45 or Falcon10w). The PATH to the .gcode files is on my NAS so that I can reach those files from the shop.  <br><br>
+	<img src="img/linuxcnc_gcode_01.bmp" />
+	<br><br>
+	The above image is the linuxcnc G-Code as it comes out of FreeCAD v1.1. I highlighted the "comments" in the file.
+	<br><br>
+	<img src="img/linuxcnc_gcode_02.bmp" />
+	<br><br>
+	This image shows how I used "labels" in FreeCAD CAM WB to assist a human to quickly find the holes I'm going to cut out. Not necessary for plasma_post, but helpful for me to read and confirm the G-Code.
+	<br><br>
+	<br><br>
+	<img src="img/linuxcnc_gcode_03.bmp" />
+	<br><br>
+	This image shows the original linuxcnc G-Code (on the left) with the plasma_post G-Code changes on the right. First, notice that plasma_post adds a "comment" to line one (not highligthed) in the file. It 
+	tells you the version of plasma_post, the date/time plasma_post was built/compiled, and the date/time plasma_post modified this G-Code.<br><br>
+	Now look at the highlighted lines following "G1 Z1.588". Plasma_post removes this G1 Z-axis when found to protect against a head crash. The comment lines I added are my understanding of
+	what an OHMIC style setup OR a proximity switch / limit switch THC setup may need. If you have either of these styles of THC on your CNC setup, you may want to experiment with those comments. 
+	<br><br>
+	It is immediately following this that we need to turn on our engraver or torch. 
+	<br>Plasma_post generates the "S1000" code to send max voltage down the PWM wire. 
+	<br>We then send an "M3" code to turn on the switch (trigger pull). This causes our laser to start or the relay on our plasma cutter to close. 
+	<br>Then the "G4 P1.3" is sent pausing for 1.3 seconds to give the cutter a chance
+	to get started and flowing. 
+	<br>The "F1143" and "F742" are added to the G1,G2, and G3 lines. They are the speeds to run in <font color="red", size="+1">mm per minute (G21 - line 7)</font>. We slow down for the arcs to "F742".
+	<br>Finally, we add the "M5" code to turn off the machine (release the trigger).
+	<br>The laser/torch moves to the next position to be cut and the sequence starts again.
+	<br><br>
+	<font color="blue", size="+2"><b>VERY SIMPLE!</b></font> So simple, you could make these modifications yourself with a text editor. It's just that plasma_post is faster and probably more accurate.
+	<br><br>
+	A very old WinXP laptop, connected to the network to access the NAS is running the latest version of LaserGRBL. LaserGRBL reads the plasma_post G-Code from the NAS and sends that G-Code to our Creality Falcon10w 
+	laser engraver to cut the part. Neither the Creality Falcon10w laser engraver, or LaserGRBL know or care if we are cutting cardboard or steel.
+<br><br>
+When specifying the linuxcnc G-Code file on the command line, you can place it where ever you wish or find convenient. Plasma_post is smart enough to find it. It can't, however, be embedded in a flag somewhere. So,
+for example, you can't say <pre> -S myGCodeIn.gcode 3308 </pre> Clearly, you meant to say <pre> -S 3308 myGCodeIn.gcode </pre> I waffle back and forth between putting it at the front and putting it at the end of the command line.
+If you write bash scripts or bat files to automate plasma_post execution, you'll probably hit on a standard. <br>
+<br><br>
+<b>Advanced User Info:</b>  plasma_post supports recursive directory searching and processing of files.
+ <br><br><br>
+	<img src="img/recursive_processing_01.bmp" />
+<br><br>
+Consider this made up tree structure. Ignore the duplicate file names, that's not important here. This is a test/example. If I run this, 
+<font color="blue">(the single quotes are required on the input names here)</font><br><br>
+<pre>
+<font color="red" size="+1">.\plasma_post64.exe -I Titanium45.ini -T ">=200" 'test/*_Titanium45.gcode'</font>
+</pre>
+ <br><br>
+ We get this.<br><br><br> 
+	<img src="img/recursive_processing_02.bmp" />
+<br><br>
+Plasma_post walked through all the sub-directories and found the files matching that regex pattern "*_Titanium.gcode" and processed them for each matching entry in the iniFile (>=200).
+This can be very helpful for the following reason. Let's say you have amassed a large pile of FlexCAD CAM linuxcnc G-Code files. You've processed them with plasma_post and you have them
+in directories. You discover a (speed, circle speed, pierce, intensity) setting that needs to change. You may be facing a daunting challenge of processing each file, although a bash script
+or bat file would probably get the job done. Plasma_post is fast and effecient. You update your iniFile with the new setting and then use the recursive processing feature of plasma_post to 
+rewrite all your G-Code output files.
+<br><br><br>
+A Final Note: plasma_post will safely read and write it's own previously processed G-Code files. It adds an extra "comment" (line 1) with the date that it did so.
+  </p>
+</body>
+
+</html>
+
